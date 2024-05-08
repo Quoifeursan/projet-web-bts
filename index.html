@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>
+ InPoll
+	</title>
+	<link rel="icon" type="image/x-icon" href="ressources/images/logo.ico">
+	<link rel="stylesheet" type="text/css" href="ressources/styles/base.css media="all" />
+	<link rel="stylesheet" type="text/css" href="ressources/styles/style.css" media="screen" />
+
+</head>
+
+<body>
+
+<div id="global">
+
+	<div id="entete">
+		<h1>
+			<img src="ressources/images/logo.png" alt="Logo" width="200">
+		</h1>
+	</div>
+	<div id="contenu">
+		<h3>Accueil</h3>
+		<p>Bienvenue sur InPoll, ici vous pouvez créer ou voter sur diffèrents sondages au choix, sur des thèmes divers et variées</p>
+		<div id="bouttonCo">
+			<button onclick="popupInscription()">  Commencez ici ! </a> </button>
+		</div>
+		<p> Déjà membre ? <a href="ressources/pages/main.html" id="mainLink">connectez-vous</a></p>
+
+
+
+<!--  POP UP INSCRIPTION -->
+
+
+
+		<div id="popupInsc" class="popup-container">
+
+			<h2>Rejoignez-nous !</h2>
+			<p>Inscrivez vous ci dessous pour commencer</p>
+
+			<div class="input">
+				<label for="prénom">Prénom</label>
+				<div class="inputa"><input type="text" id="prénom" name="prenom" required minlength="4" maxlength="30" size="30" /></div>
+			</div>
+			
+			<br>
+			<div class="input">
+				<label for="name">Nom</label>
+				<div class="inputa"><input type="text" id="name" name="nom" required minlength="4" maxlength="30" size="30" /></div>
+			</div>
+	
+			<br> 
+			<div class="input">
+				<label for="email">Adresse Email</label>
+				<div class="inputa"><input type="text" id="email" name="email" required minlength="4" maxlength="30" size="30" /></div>
+			</div>
+			<br>
+			<div id="bouttonCo">
+				<button id="submit-connexion"> <a href="ressources/pages/main.html">S'inscrire</a></button>
+				<button onclick="closePopup()">Annuler</button>
+			</div>
+		</div>
+		<div id="overlay" class="overlay"></div>
+
+		
+		
+		
+		
+		<!--  POP UP CONNEXION     -->
+
+
+
+
+		<div id="popupConn" class="popup-container">
+
+			<h2>Oups</h2>
+			<p>Il semblerait que vous n'ayez pas de compte !</p>
+			<div id="bouttonCo">
+			<button onclick="closePopup()">Fermer</button>
+		</div>
+		</div>
+		<div id="overlay" class="overlay"></div>
+		<script src="ressources/scripts/inscription.js"></script>
+
+
+		
+		
+		
+		
+		
+		<!--  POP UP DEJA CONNECTE     -->
+
+
+
+
+		<div id="popupReset" class="popup-container">
+
+			<h2>Vous avez déjà un compte !</h2>
+			<p>Que voulez vous faire ?</p>
+			<div id="bouttonCo">
+			<button onclick="closePopup()">Se connecter</button>
+			<button onclick="resetAccount()">Réinitialiser la session</button>
+		</div>
+		</div>
+		<div id="overlay" class="overlay"></div>
+		<script src="ressources/scripts/inscription.js"></script>
+
+		
+		
+		
+		
+		
+		<!--  POP UP RESET    -->
+
+
+
+
+		<div id="popupOkReset" class="popup-container">
+
+			<h2>C'est fait !</h2>
+			<p>Votre compte a été Réinitialisé !</p>
+			<div id="bouttonCo">
+			<button onclick="popupInscription()">Je me réinscrit !</button>																			</button>
+		</div>
+		</div>
+		<div id="overlay" class="overlay"></div>
+		<script src="ressources/scripts/inscription.js"></script>
+
+
+
+
+	</div>
+
+	<div id="pied">
+		<p>
+		</p>
+
+
+
+</div>
+
+<script src="ressources/scripts/popup.js"></script>
+<script src="ressources/scripts/script.js"></script>
+<script src="ressources/scripts/connexion.js"></script>
+</body>
+</html>
+
